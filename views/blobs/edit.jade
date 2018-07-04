@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+	h1.
+		ID projekta:  #{blob._id}
+	form(action='/blobs/#{blob._id}/edit',method='post',name='updateblob',enctype='application/x-www-form-urlencoded')
+		p Naziv projekta: 
+			input#inputNazivProjekta(type="text", value="#{blob.naziv_projekta}", name="naziv_projekta")
+		p Opis projekta: 
+			input#inputOpisProjekta(type="text", value="#{blob.opis_projekta}", name="opis_projekta")
+		p Cijena projekta:
+			input#inputCijenaProjekta(type="number", value="#{blob.cijena_projekta}", name="cijena_projekta")
+		p Datum pocetka: 
+			input#inputDatumPocetka(type="date", value="#{datumpocetka}" name="datum_pocetka")
+		p Datum zavrsetka: 
+			input#inputDatumZavrsetka(type="date", value="#{datumzavrsetka}" name="datum_zavrsetka")
+		p Obavljeni poslovi: 
+			input#inputObavljeniPoslovi(type="text", value="#{blob.obavljeni_poslovi}", name="obavljeni_poslovi")
+		p Clanovi projektnog tima: 
+			input#inputClanoviProjekta(type="text", value="#{blob.clanovi_projekta}", name="clanovi_projekta")
+		p
+			input(type='hidden',value='PUT',name='_method')
+		p
+			button#btnSubmit(type='submit').
+				Azuriraj
+		

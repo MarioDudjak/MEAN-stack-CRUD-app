@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAddBlob(name="addblob",method="post",action="/users")
+		p Korisnicko ime: 
+			input#inputUsername(type="text", placeholder="user123", name="username")
+		p Email: 
+			input#inputEmail(type="text", placeholder="ex. Email", name="email")
+		p Lozinka: 
+			input#inputPassword(type="password", placeholder="pw123", name="password")
+		p
+			button#btnSubmit(type="submit") Dodaj korisnika

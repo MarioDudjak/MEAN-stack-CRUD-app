@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAddBlob(name="addblob",method="post",action="/blobs")
+		p Naziv projekta: 
+			input#inputNazivProjekta(type="text", placeholder="ex. Projekt1", name="naziv_projekta")
+		p Opis projekta: 
+			input#inputOpisProjekta(type="text", placeholder="ex. Opis projekta", name="opis_projekta")
+		p Cijena projekta:
+			input#inputCijenaProjekta(type="number", placeholder="ex. 123456", name="cijena_projekta")
+		p Datum pocetka: 
+			input#inputDatumPocetka(type="date", name="datum_pocetka")
+		p Datum zavrsetka: 
+			input#inputDatumZavrsetka(type="date", name="datum_zavrsetka")
+		p Obavljeni poslovi: 
+			input#inputObavljeniPoslovi(type="text", placeholder="ex. posao1, posao2", name="obavljeni_poslovi")
+		p Clanovi projektnog tima: 
+			input#inputClanoviProjekta(type="text", placeholder="ex. Ivo Ivic, Marko Maric", name="clanovi_projekta")
+		p
+			button#btnSubmit(type="submit") Dodaj projekt

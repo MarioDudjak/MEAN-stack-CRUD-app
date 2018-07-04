@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1.
+        Podaci o projektu: 
+    p Naziv projekta: #{blob.naziv_projekta}
+    p Opis projekta: #{blob.opis_projekta}
+    p Cijena projekta: #{blob.cijena_projekta}
+    p Datum pocetka: #{blob.datum_pocetka}
+    p Datum zavrsetka: #{blob.datum_zavrsetka}
+    p Obavljeni poslovi: #{blob.obavljeni_poslovi}
+    p Projektni clanovi: #{blob.clanovi_projekta}
+    p 
+        a(href='/blobs') Nazad
+    
